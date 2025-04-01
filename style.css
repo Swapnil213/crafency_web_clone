@@ -218,8 +218,76 @@ marquee img{
     text-align: center;
     font-size: 1.2vw;
     color: #fff;
+    border-top: 0.2px solid #8e8e8e;
 }
 
 .footer-text2 span{
     color: #8e8e8e;
+}
+
+.features{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.features .title{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.features .desc{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 4vw;
+}
+
+.feature-container{
+    display: flex;
+    margin: 5vw;
+    gap: 5vw;
+}
+
+.feature{
+    display: flex;
+    min-width: 40vw;
+    height: 60vh;
+    border-radius: 30px;
+    border: 0.1px solid #8e8e8e;
+    overflow: hidden;
+}
+
+.feature .feature-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw 3vw;
+}
+
+.feature .feature-text .feature-heading{
+    color: #fff;
+    font-size: 2.5vw;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.feature .feature-text .feature-desc{
+    color: #939393;
+    font-size: 1vw;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.feature-image{
+    width: 50%;
+    height: 60vh;
+    border-radius: 30px;
+    overflow: hidden;
+    background-image: url(images/feature1.jpg);
+    background-size: cover;
+    background-position: center;
 }
