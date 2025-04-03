@@ -18,13 +18,16 @@ body, html{
 
 .nav{
     background: #00000000;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 0.35px solid #1A1A1A;
     border-radius: 10px;
     padding: 25px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .navbar{
@@ -34,13 +37,17 @@ body, html{
     gap: 20px;
 }
 
+.logo img{
+    width: 12vw;
+}
+
 .navbar a{
     padding: 10px 20px;
     background: #0f0f0f;
     text-decoration: none;
     color: #fff;
-    border-radius: 20px;
-    font-size: 20px;
+    border-radius: 50px;
+    font-size: 1.2vw;
     font-weight: 300;
     transition: all 0.5s ease-in;
 }
@@ -59,7 +66,7 @@ body, html{
     padding: 10px 20px;
     border: 0.8px solid #fff;
     border-radius: 50px;
-    font-size: 22px;
+    font-size: 1.4vw;
     font-weight: 700;
     transition: all 0.5s ease-in;
 }
@@ -70,11 +77,13 @@ body, html{
 }
 
 .hero{
+    width: 100%;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 8vw;
+    margin-top: 5vw;
     padding: 0 20px;
     /* background: url(images/679137836ae5beeac6f7e098_67a3539e25d4ffdd8c776750_2449452_Abstract_Background_1920x1080-transcode.mp4); */
 }
@@ -83,7 +92,7 @@ body, html{
     font-size: 4.5vw;
     text-align: center;
     line-height: 4.2vw;
-    padding: 20px 5px;
+    padding: 1vw 0;
     color: #666666;
     font-weight: 600;
 }
@@ -103,7 +112,7 @@ body, html{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 25px;
+    gap: 2vw;
     padding: 20px 10px;
 }
 
@@ -113,7 +122,7 @@ body, html{
     padding: 10px 20px;
     border: 0.8px solid #fff;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 1.3vw;
     font-weight: 700;
     transition: all 0.5s ease-in;
 }
@@ -262,13 +271,17 @@ marquee img{
 
 .feature-container{
     display: flex;
-    margin: 5vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5vw 0;
     gap: 5vw;
 }
 
 .feature{
     display: flex;
-    min-width: 40vw;
+    width: 40vw;
+    min-width: 300px;
     height: 60vh;
     border-radius: 30px;
     border: 0.1px solid #8e8e8e;
@@ -310,6 +323,7 @@ marquee img{
 .home-pages{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -329,7 +343,10 @@ marquee img{
 
 .page-container{
     display: flex;
-    margin: 5vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5vw 0;
     gap: 5vw;
 }
 
@@ -338,7 +355,8 @@ marquee img{
     flex-direction: column;
     align-items: center;
     padding: 1vw;
-    min-width: 40vw;
+    min-width: 300px;
+    width: 40vw;
     height: 60vh;
     border-radius: 30px;
     border: 0.1px solid #8e8e8e;
@@ -373,4 +391,94 @@ marquee img{
 
 .page:hover img{
     transform: scale(1.05);
+}
+
+@media (max-width: 650px) {
+    .navbar{
+        display: none;
+    }
+
+    .logo img{
+        width: 35vw;
+    }
+
+    .more h3{
+        font-size: 2.5vw;
+    }
+
+    .hero h1{
+    font-size: 8vw;
+    line-height: 7.5vw;
+}
+
+.hero p{
+    font-size: 2.4vw;
+}
+.hero .more-buttons h3{
+    font-size: 3vw;
+}
+
+.feature .feature-text{
+    width: 40%;
+    padding: 6vw 2vw;
+}
+
+.feature .feature-text .feature-heading{
+    font-size: 3.5vw;
+}
+
+.feature .feature-text .feature-desc{
+    font-size: 1.8vw;
+}
+
+.feature-image{
+    width: 60%;
+}
+
+.page{
+    padding: 3vw;
+}
+
+.page h1{
+    font-size: 3.5vw;
+}
+
+.marquee-container{
+    width: 90vw;
+    margin: 5%;
+    padding-top: 5vw;
+}
+
+marquee{
+    margin-bottom: 5vw;
+    display: flex;
+}
+
+marquee img{
+    width: 60vw;
+    height: 35vw;
+    padding-right: 10vw;
+}
+
+.footer-text1 img{
+    width: 25vw;
+    padding: 5vw 0;
+}
+
+.footer-text1 h1{
+    font-size: 7vw;
+}
+
+.footer-text1 p{
+    font-size: 2vw;
+}
+
+.buttons-container h3{
+    font-size: 3vw;
+}
+
+.footer-text2{
+    padding: 2.5vw 0;
+    font-size: 2vw;
+}
 }
