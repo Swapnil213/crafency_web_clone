@@ -76,6 +76,26 @@ body, html{
     color: #000;
 }
 
+.uparrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: sticky;
+    top: 90%;
+    left: 95%;
+    z-index: 99;
+    background: #000;
+    overflow: hidden;
+    border: 2px solid #fff;
+    padding: 8px 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.uparrow img{
+    width: 100%;
+    align-items: center;
+}
+
 .hero{
     width: 100%;
     min-height: 30vh;
@@ -125,6 +145,12 @@ body, html{
     font-size: 1.3vw;
     font-weight: 700;
     transition: all 0.5s ease-in;
+}
+
+.hero .more-buttons h3::after{
+    width: 30px;
+    height: 30px;
+    background: #fff;
 }
 
 .hero .more-buttons h3:nth-child(1){
