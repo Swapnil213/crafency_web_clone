@@ -29,55 +29,52 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 
+// var tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: ".main",
+//         scroller: ".main",
+//         scrub: true,
+//         start: "top top",
+//         end: "bottom 80%",
+//         marker: true,
+//     }
+// });
 
+var t1 = gsap.timeline();
 
-// --- RED PANEL ---
-gsap.from(".line-1", {
-    scrollTrigger: {
-        trigger: ".line-1",
-        scroller: ".smooth-scroll",
-        scrub: true,
-        start: "top bottom",
-        end: "top top",
-        onUpdate: self => console.log(self.direction)
-    },
-    scaleX: 0,
-    transformOrigin: "left center",
-    ease: "none"
+gsap.from(".hero h1", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 2
+});
+
+gsap.from(".hero p", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.3
+});
+
+gsap.from(".hero .more-buttons", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.5
 });
 
 
-// --- ORANGE PANEL ---
-gsap.from(".line-2", {
-    scrollTrigger: {
-        trigger: ".orange",
-        scroller: ".smooth-scroll",
-        scrub: true,
-        pin: true,
-        start: "top top",
-        end: "+=100%"
-    },
-    scaleX: 0,
-    transformOrigin: "left center",
-    ease: "none"
-});
 
-
-// --- PURPLE/GREEN PANEL ---
-var tl = gsap.timeline({
+var t2 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".main",
-        scroller: ".main",
-        scrub: true,
-        start: "top top",
-        end: "bottom 20%",
+        trigger: ".features",
+        scroller: ".features",
+        start: "top 140%",
+        end: "top 40%",
         marker: true,
     }
 });
 
-tl.from(".hero h1", { 
-    x: -100,
-    opacity: 0
- });
+
 
 
